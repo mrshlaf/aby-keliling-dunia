@@ -166,34 +166,48 @@ export default function Home() {
            </div>
         </section>
 
-        {/* Dynamic Image Break Section */}
-        <section className="-mx-4 sm:-mx-6 lg:mx-0 rounded-[1.5rem] md:rounded-[4rem] overflow-hidden relative min-h-[450px] md:min-h-[600px] flex items-center justify-center bg-foreground group shadow-2xl border-4 border-white/50">
+        {/* High-End Spotlight Section */}
+        <section className="-mx-4 sm:-mx-6 lg:mx-0 rounded-[3rem] md:rounded-[5rem] overflow-hidden relative min-h-[500px] md:min-h-[700px] flex items-center bg-foreground group shadow-luxury border-8 border-white">
            <img 
               src="./luxury_lampung_trip_hero_1776516790626.png" 
               alt="Lampung Visual" 
-              className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-[4000ms] ease-out"
+              className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-[6000ms] ease-out mix-blend-luminosity"
            />
-           <div className="absolute inset-0 bg-gradient-to-t from-foreground via-transparent to-transparent opacity-80" />
+           <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/60 to-transparent z-10" />
            
-           {/* Subtle Logo Watermark */}
-           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] opacity-5 pointer-events-none">
-              <img src={abyLogo.src} alt="Brand Watermark" className="w-full grayscale brightness-0 invert" />
-           </div>
+           <div className="relative z-20 w-full px-8 md:px-24 flex flex-col md:flex-row md:items-end justify-between gap-10">
+              <div className="space-y-4 md:space-y-6 max-w-4xl">
+                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary text-white text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em]">
+                   Mission Blueprint
+                 </div>
+                 <h2 className="text-6xl sm:text-8xl md:text-[12rem] font-black font-outfit text-white tracking-tighter leading-[0.8] uppercase italic">
+                    Beyond <br />
+                    <span className="text-gradient">The Horizon.</span>
+                 </h2>
+                 <p className="text-white/40 text-xs md:text-2xl font-medium tracking-wide max-w-xl md:leading-relaxed">
+                   Eksplorasi elit di pesisir barat Indonesia. <br className="hidden md:block" /> Privasi mutlak, dominasi total.
+                 </p>
+              </div>
 
-           <div className="relative z-10 text-center space-y-4 md:space-y-8 px-6">
-              <h2 className="text-5xl md:text-8xl font-black font-outfit text-white tracking-tighter leading-none italic drop-shadow-2xl">
-                 Beyond The <span className="text-primary">Horizon.</span>
-              </h2>
-              <p className="text-white/60 text-[10px] md:text-2xl font-black md:font-medium max-w-xl mx-auto uppercase tracking-[0.4em]">Lampung • West Indonesia • 2026</p>
-              <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-                 <div className="px-3 md:px-6 py-1.5 md:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[7px] md:text-[10px] font-black uppercase tracking-widest">Private Villa</div>
-                 <div className="px-3 md:px-6 py-1.5 md:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[7px] md:text-[10px] font-black uppercase tracking-widest">Secret Islands</div>
+              <div className="flex flex-col gap-4 md:gap-6 md:pb-10">
+                 <div className="p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] bg-white/5 backdrop-blur-2xl border border-white/10 space-y-4 md:space-y-6">
+                    <p className="text-[8px] md:text-[10px] font-black text-primary uppercase tracking-[0.4em]">Target Location</p>
+                    <div className="space-y-2">
+                       <p className="text-2xl md:text-4xl font-black text-white font-outfit uppercase">Lampung, ID</p>
+                       <p className="text-[10px] md:text-sm text-white/40 font-bold uppercase tracking-widest">Est. August 2026</p>
+                    </div>
+                    <div className="flex gap-2">
+                       <span className="h-1.5 w-12 rounded-full bg-primary" />
+                       <span className="h-1.5 w-4 rounded-full bg-white/20" />
+                       <span className="h-1.5 w-4 rounded-full bg-white/20" />
+                    </div>
+                 </div>
               </div>
            </div>
         </section>
 
         {/* Logistics & Command Center */}
-        <section className="grid grid-cols-1 xl:grid-cols-12 gap-10 md:gap-12 items-start">
+        <section className="mt-24 md:mt-48 grid grid-cols-1 xl:grid-cols-12 gap-10 md:gap-12 items-start">
            
            {/* Section Title */}
            <div className="xl:col-span-12 space-y-3 md:space-y-4 text-center md:text-left">
