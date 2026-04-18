@@ -46,6 +46,17 @@
   --animation-pulse-slow: pulse-slow 8s ease-in-out infinite;
 }
 
+@layer base {
+  body {
+    @apply antialiased overflow-x-hidden;
+  }
+  
+  /* Responsive typography scaling */
+  h1 { @apply text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-black; }
+  h2 { @apply text-3xl sm:text-5xl md:text-7xl lg:text-9xl font-black; }
+  h3 { @apply text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-black; }
+}
+
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }

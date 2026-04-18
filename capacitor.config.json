@@ -3,7 +3,7 @@
   "appName": "ABY Trip",
   "webDir": "out",
   "server": {
-    "url": "https://aby-keliling-dunia.vercel.app",
+    "url": "https://aby-keliling-dunia.vercel.app/",
     "cleartext": true
   }
 }

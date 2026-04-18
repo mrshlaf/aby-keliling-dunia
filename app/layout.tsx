@@ -10,9 +10,7 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 export const metadata: Metadata = {
   title: "ABY Trip – Savings Tracker",
   description: "Luxury transparency for the Lampung Trip 2026",
-  viewport: "width=device-width, initial-scale=1, viewport-fit=cover",
   manifest: "/manifest.json",
-  themeColor: "#7c3aed",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
@@ -22,6 +20,13 @@ export const metadata: Metadata = {
     icon: "/icon.svg",
     apple: "/icon.svg",
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#7c3aed",
 };
 
 export default function RootLayout({
