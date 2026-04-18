@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
 import { useState } from "react";
 import { Sparkles, User, Lock, ArrowLeft } from "lucide-react";
 import { loginAction, signUpAction } from "./actions";
