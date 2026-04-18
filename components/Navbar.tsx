@@ -8,7 +8,8 @@ import { usePathname } from "next/navigation";
 interface NavbarProps {
   session: {
     userId: string;
-    username: string;
+    username?: string;
+    role?: string;
   } | null;
 }
 
