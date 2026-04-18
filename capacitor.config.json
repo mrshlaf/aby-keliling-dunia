@@ -1,0 +1,9 @@
+{
+  "appId": "com.abytrip.tracker",
+  "appName": "ABY Trip",
+  "webDir": "out",
+  "server": {
+    "url": "https://aby-keliling-dunia.vercel.app",
+    "cleartext": true
+  }
+}
