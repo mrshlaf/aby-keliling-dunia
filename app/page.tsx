@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import { fetchGlobalStats, fetchAllMembersStatus, fetchPracticalData, fetchPendingVerifications, verifyPayment, toggleChecklistItem } from "./contributions/actions";
 import { getAuthSession } from "./login/actions";
 
+import abyLogo from "@/images/aby.png";
+
 export default function Home() {
   const [stats, setStats] = useState({ total: 0, memberCount: 0 });
   const [leaderboard, setLeaderboard] = useState<any[]>([]);
@@ -87,14 +89,19 @@ export default function Home() {
         <section className="relative grid grid-cols-1 lg:grid-cols-12 gap-16 md:gap-24 items-center">
            <div className="lg:col-span-12 xl:col-span-7 space-y-10 md:space-y-14 animate-in slide-in-from-left duration-1000">
               <div className="space-y-6 md:space-y-8">
-                <div className="inline-flex items-center gap-3 rounded-full bg-white/50 backdrop-blur-md px-6 py-2 text-[11px] font-black tracking-[0.3em] text-primary uppercase border border-white/80 shadow-sm animate-bounce-subtle">
-                   <Zap size={14} className="fill-primary" /> {isAdmin ? "Admin Command Suite" : "Lampung Adventure Protocol"}
+                <div className="flex items-center gap-6">
+                   <div className="h-16 w-16 md:h-24 md:w-24 rounded-[2rem] overflow-hidden shadow-3xl border-4 border-white animate-float p-1 bg-white">
+                      <img src={abyLogo.src} alt="ABY Logo" className="h-full w-full object-contain rounded-[1.5rem]" />
+                   </div>
+                   <div className="inline-flex items-center gap-3 rounded-full bg-white/50 backdrop-blur-md px-6 py-2 text-[11px] font-black tracking-[0.3em] text-primary uppercase border border-white/80 shadow-sm">
+                      <Zap size={14} className="fill-primary" /> {isAdmin ? "Admin Command Suite" : "Lampung Adventure Protocol"}
+                   </div>
                 </div>
-                <h1 className="text-6xl sm:text-8xl md:text-[8rem] lg:text-[10rem] font-black tracking-tighter leading-[0.85] font-outfit">
+                <h1 className="text-5xl sm:text-7xl md:text-[8rem] lg:text-[10rem] font-black tracking-tighter leading-[0.85] font-outfit">
                    UNLEASH <br /> 
-                   <span className="text-gradient italic">THE ABY.</span>
+                   <span className="text-gradient italic text-6xl sm:text-8xl md:text-[8rem] lg:text-[11rem]">THE ABY.</span>
                 </h1>
-                <p className="text-muted-foreground text-xl md:text-3xl font-medium max-w-2xl leading-relaxed tracking-tight">
+                <p className="text-muted-foreground text-lg md:text-3xl font-medium max-w-2xl leading-relaxed tracking-tight">
                    {isAdmin ? "Otoritas tertinggi pengelolaan logistik dan verifikasi finansial Trip Lampung 2026." : "Pantau tabungan transparan, rincian biaya villa, dan logistik tempur di markas utama kita."}
                 </p>
               </div>
@@ -158,21 +165,27 @@ export default function Home() {
         </section>
 
         {/* Dynamic Image Break Section */}
-        <section className="rounded-[4rem] overflow-hidden relative min-h-[500px] flex items-center justify-center bg-foreground group shadow-2xl border-4 border-white/50">
+        <section className="rounded-[4rem] overflow-hidden relative min-h-[400px] md:min-h-[500px] flex items-center justify-center bg-foreground group shadow-2xl border-4 border-white/50">
            <img 
               src="./luxury_lampung_trip_hero_1776516790626.png" 
               alt="Lampung Visual" 
               className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-[4000ms] ease-out"
            />
            <div className="absolute inset-0 bg-gradient-to-t from-foreground via-transparent to-transparent opacity-80" />
-           <div className="relative z-10 text-center space-y-8 px-6">
-              <h2 className="text-5xl md:text-8xl font-black font-outfit text-white tracking-tighter leading-none italic">
+           
+           {/* Subtle Logo Watermark */}
+           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] opacity-5 pointer-events-none">
+              <img src={abyLogo.src} alt="Brand Watermark" className="w-full grayscale brightness-0 invert" />
+           </div>
+
+           <div className="relative z-10 text-center space-y-6 md:space-y-8 px-6">
+              <h2 className="text-4xl md:text-8xl font-black font-outfit text-white tracking-tighter leading-none italic">
                  Beyond The <span className="text-primary">Horizon.</span>
               </h2>
-              <p className="text-white/60 text-lg md:text-2xl font-medium max-w-xl mx-auto uppercase tracking-widest">Lampung • West Indonesia • 2026</p>
-              <div className="flex justify-center gap-4">
-                 <div className="px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] font-black uppercase tracking-widest">Private Villa</div>
-                 <div className="px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] font-black uppercase tracking-widest">Secret Islands</div>
+              <p className="text-white/60 text-sm md:text-2xl font-medium max-w-xl mx-auto uppercase tracking-widest">Lampung • West Indonesia • 2026</p>
+              <div className="flex flex-wrap justify-center gap-3">
+                 <div className="px-4 md:px-6 py-2 md:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[8px] md:text-[10px] font-black uppercase tracking-widest">Private Villa</div>
+                 <div className="px-4 md:px-6 py-2 md:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[8px] md:text-[10px] font-black uppercase tracking-widest">Secret Islands</div>
               </div>
            </div>
         </section>

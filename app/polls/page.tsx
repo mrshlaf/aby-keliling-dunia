@@ -71,8 +71,11 @@ export default function PollsPage() {
           <div className="inline-flex items-center gap-2 rounded-full bg-primary/5 px-4 py-1.5 text-[10px] font-black tracking-widest text-primary uppercase border border-primary/10">
             <Sparkles size={12} /> Democratic Decisions
           </div>
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter font-outfit leading-none">Group <span className="text-primary italic">Voice.</span></h1>
-          <p className="text-muted-foreground text-base md:text-xl font-medium max-w-sm leading-relaxed">
+          <h1 className="text-4xl sm:text-6xl md:text-[8rem] font-black tracking-tighter leading-[0.85] font-outfit">
+             GROUP <br /> 
+             <span className="text-gradient italic text-5xl sm:text-7xl md:text-[9rem]">VOICE.</span>
+          </h1>
+          <p className="text-muted-foreground text-lg md:text-xl font-medium max-w-sm leading-relaxed">
             Voting transparan buat semua keputusan trip. Adil, terbuka, dan tanpa drama.
           </p>
         </div>

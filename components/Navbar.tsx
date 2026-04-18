@@ -12,6 +12,8 @@ interface NavbarProps {
   } | null;
 }
 
+import abyLogo from "@/images/aby.png";
+
 export default function Navbar({ session }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -33,9 +35,12 @@ export default function Navbar({ session }: NavbarProps) {
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
         <div className="container flex h-16 md:h-20 items-center justify-between mx-auto px-4 md:px-6">
           <div className="flex items-center gap-2">
-            <a href="/" className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-primary/20">A</div>
-              <span className="text-lg md:text-xl font-black tracking-tighter text-foreground font-outfit uppercase">ABY <span className="text-primary font-medium">Trip</span></span>
+            <a href="/" className="flex items-center gap-3 group">
+              <div className="relative h-10 w-10 md:h-12 md:w-12 rounded-xl overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 flex items-center justify-center">
+                 <div className="absolute inset-0 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                 <img src={abyLogo.src} alt="ABY Logo" className="max-h-full max-w-full object-contain relative z-10" />
+              </div>
+              <span className="text-xl md:text-2xl font-black tracking-tighter text-foreground font-outfit uppercase">ABY <span className="text-primary italic">Trip.</span></span>
             </a>
           </div>
           
@@ -77,7 +82,7 @@ export default function Navbar({ session }: NavbarProps) {
       </header>
 
       {/* Mobile Bottom Navigation - LUXURY STYLE */}
-      <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-[90%] max-w-sm h-16 bg-foreground/95 backdrop-blur-xl border border-white/10 rounded-[2rem] px-6 flex items-center justify-between shadow-2xl animate-in fade-in slide-in-from-bottom-8 duration-700">
+      <nav className="md:hidden fixed bottom-[calc(1.5rem+env(safe-area-inset-bottom,0px))] left-1/2 -translate-x-1/2 z-[100] w-[90%] max-w-sm h-16 bg-foreground/95 backdrop-blur-xl border border-white/10 rounded-[2rem] px-6 flex items-center justify-between shadow-2xl animate-in fade-in slide-in-from-bottom-8 duration-700">
         {navLinks.map((link) => {
           const isActive = pathname === link.href;
           return (

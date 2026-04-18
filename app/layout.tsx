@@ -10,6 +10,7 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 export const metadata: Metadata = {
   title: "ABY Trip – Savings Tracker",
   description: "Luxury transparency for the Lampung Trip 2026",
+  viewport: "width=device-width, initial-scale=1, viewport-fit=cover",
   manifest: "/manifest.json",
   themeColor: "#7c3aed",
   appleWebApp: {

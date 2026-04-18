@@ -8,7 +8,7 @@
   "theme_color": "#7c3aed",
   "icons": [
     {
-      "src": "/icon.png",
+      "src": "/images/aby.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

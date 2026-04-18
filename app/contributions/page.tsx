@@ -73,11 +73,11 @@ export default function ContributionsPage() {
              <div className="inline-flex items-center gap-3 rounded-full bg-white px-6 py-2 text-[11px] font-black tracking-[0.3em] text-primary uppercase border border-border shadow-sm">
                 <Coins size={14} className="fill-primary" /> Financial Protocol
              </div>
-             <h1 className="text-6xl sm:text-8xl md:text-[8rem] font-black tracking-tighter leading-[0.85] font-outfit">
+             <h1 className="text-5xl sm:text-7xl md:text-[8rem] font-black tracking-tighter leading-[0.85] font-outfit">
                 PERSONAL <br /> 
-                <span className="text-gradient italic">SETORAN.</span>
+                <span className="text-gradient italic text-6xl sm:text-8xl md:text-[9rem]">SETORAN.</span>
              </h1>
-             <p className="text-muted-foreground text-xl md:text-3xl font-medium max-w-sm tracking-tight leading-relaxed">
+             <p className="text-muted-foreground text-lg md:text-3xl font-medium max-w-sm tracking-tight leading-relaxed">
                 Manajemen komitmen finansial untuk ekspedisi Lampung 2026.
              </p>
           </div>
